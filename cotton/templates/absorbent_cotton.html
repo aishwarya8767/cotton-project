@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absorbent Cotton</title>
+    {% load static %}
+   
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blood_collection_tubes.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+       
+     <nav class="navbar">
+    <!-- Left: Logo + Brand Name -->
+    <div class="nav-left">
+        <img src="{% static 'img/logo2.png' %}" alt="Tirupati Logo" class="logo">
+        <span class="brand-name">Tirupati Cotton</span>
+    </div>
+
+    <!-- Right: Menu Links -->
+    <div class="nav-right">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+
+        <!-- Products Dropdown -->
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Products ▾</a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                <li><a href="{% url 'Absorbent_Cotton' %}">Absorbent Cotton</a></li>
+                <li><a href="{% url 'Absorbent_Gauze_Bandage' %}">Absorbent Gauze Bandage</a></li>
+                <li><a href="{% url 'Syringe_and_Needles' %}">Syringe and Needles</a></li>
+                <li><a href="{% url 'Hand_Gloves' %}">Hand Gloves</a></li>
+                <li><a href="{% url 'Blood_Collection_Tubes' %}">Blood Collection Tubes</a></li>
+                <li><a href="{% url 'zig_zag_cotton' %}">Zig Zag Cotton</a></li>
+                <li><a href="{% url 'Gauze_Cloth_Than' %}">Gauze Cloth Than</a></li>
+                <li><a href="{% url 'Other_Products' %}">Other Products</a></li>
+            </ul>
+        </div>
+
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+</nav>
+</header>
+        
+
+    <!-- Navbar
+    <nav>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            
+
+           Products Dropdown -->
+    <!-- <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+         data-bs-toggle="dropdown" aria-expanded="false">
+        Products
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+        <li><a href="{% url 'Absorbent_Cotton' %}">Absorbent Cotton</a></li>
+        <li><a href="{% url 'Absorbent_Gauze_Bandage' %}">Absorbent Gauze Bandage</a></li>
+        <li><a href="{% url 'Syringe_and_Needles' %}">Syringe and Needles</a></li>
+        <li><a href="{% url 'Hand_Gloves' %}">Hand Gloves</a></li>
+        <li><a href="{% url 'Blood_Collection_Tubes' %}">Blood Collection Tubes</a></li>
+        <li><a href="{% url 'Other_Products' %}">Other Products</a></li>
+   
+      </ul>
+    </li>
+
+    <li><a href="contact">Contact</a></li>
+  </ul> -->
+
+
+<!-- 
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav> -->
+
+    <!-- Product Section -->
+    <section class="product-section">
+       <section class="product-description">
+   <h1 class="product-title">Absorbent Cotton</h1>
+ 
+</section>
+
+            <div class="product-wrapper">
+
+                <!-- Left: Product Image -->
+                <div class="product-image">
+                    <img src="{% static 'img/absorbent_cotton_roll.jpg' %}" alt="Absorbent Cotton">
+
+                    <!-- Range and Button below image -->
+                    <div class="range-container">
+                        <p><strong>Available Range:</strong>20 gm | 50 gm | 100 gm | 200 gm | 500 gm</p>
+                        <button class="btn">
+                          <a href="{% url 'enquire' %}">Contact Us for Bulk Orders</a>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Product Details -->
+                <div class="product-details">
+                     <p>
+    Absorbent Cotton is a soft, fibrous material made from 100% natural cotton, thoroughly cleaned and bleached to ensure high absorbency and purity. It is sterile and safe, making it ideal for medical, surgical, and first-aid applications. Absorbent cotton is widely used in hospitals, clinics, and personal care for wound dressing, cleaning, and hygiene purposes.
+  </p>
+
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Made from 100% pure cotton</li>
+                        <li>Highly absorbent and quick to soak up liquids</li>
+                        <li>Soft and gentle on skin, non-irritating</li>
+                        <li>Hygienic and sterile, suitable for medical use</li>
+                        <li>Durable, maintains integrity during use</li>
+                        <li>Ideal for first-aid, surgical, and skincare applications</li>
+                    </ul>
+
+                    <h3>Uses</h3>
+                    <ul>
+                        <li>Wound care: Cleaning and dressing wounds</li>
+                        <li>Medical and surgical: Used in hospitals and clinics for procedures and dressing</li>
+                        <li>First-aid kits: Essential for emergency care</li>
+                        <li>Personal hygiene: Skin cleaning, baby care, and beauty applications</li>
+                        <li>Laboratory use: Absorbent material for sample handling</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+
+<footer>
+    <div class="footer-container">
+
+        <!-- About / Logo -->
+        <div class="footer-section about">
+            <h3>Medical Cotton Co.</h3>
+            <p>Providing high-quality sterile medical cotton for hospitals, clinics, and home first aid. Trusted for safety and quality.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'products' %}">Products</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>📞 +91-XXXXXXXXXX</p>
+            <p>✉ info@medicalcotton.com</p>
+            <p>🏢 123 Cotton Street, Mumbai, India</p>
+        </div>
+
+
+        <!-- Social Media -->
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Medical Cotton Co. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

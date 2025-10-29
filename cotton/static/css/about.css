@@ -1,0 +1,592 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #138a9c;
+    border-bottom: 2px solid#138a9c;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    height: 90;
+}
+
+/* Left: Logo + Brand Name */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-left .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #505254;
+}
+
+.nav-left .brand-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Right: Menu Links */
+.nav-right a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    font-weight: bold; 
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Hover effect */
+.nav-right a:hover {
+    color: #292927;         /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* optional subtle bg */
+}
+
+/* Active/Clicked effect */
+.nav-right a:active {
+    color: #5f5d56;         /* Change color when link is clicked */
+    background-color: rgba(255, 255, 255, 0.2); /* subtle bg */
+}
+
+
+/* Make dropdown inline with other links */
+.dropdown {
+    position: relative;
+    display: inline-block;  /* important: align horizontally */
+}
+
+/* Dropdown button (Products link) */
+.dropbtn {
+    text-decoration: none;
+    color: #138a9c;
+    font-weight: bold;
+    padding: 0;
+    margin-left: 20px;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Hover effect */
+.dropbtn:hover {
+    color: #53534f;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;               
+    position: absolute;
+    top: 100%;                   
+    left: 0;
+    background-color:#138a9c;   /* Dropdown background */
+    list-style: none; 
+    padding: 0;                /* no extra padding */
+    margin: 0;                /* Reduce vertical padding */
+    border-radius: 5px;
+    width: auto;            /* width auto -> content ke according */
+    min-width: 120px;           /* Smaller width */
+    z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Remove spacing from <li> */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Dropdown links styling */
+.dropdown-menu li a {
+    display: block;
+    white-space: nowrap; 
+    padding: 2px 8px;
+    line-height: 1;  
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: block;         /* ensures each link is on its own line */
+    margin: 0; 
+    background-color: transparent; /* <-- make sure link background is transparent */
+  
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+/* ====== Mobile Menu ====== */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: #1f2937;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  nav .nav-links {
+    position: absolute;
+    right: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+  }
+
+  nav .nav-links.active {
+    right: 0;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+/* ====== Content Section ====== */
+.content {
+  text-align: center;
+  /* color: #5f8bc9; */
+  padding: 80px 20px;
+  background-color: #e0f2fe; /* light blue */
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #138a9c;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-top: 5px;
+}
+
+/* ====== About Section ====== */
+.container h1, .container p {
+ color: #138a9c;
+ padding: 2px;
+  max-width: 800px;
+   text-align: center;
+   font-weight: 600;
+  margin: 2px auto;
+}
+
+.quality-section {
+  background-color: #f3f4f6;
+  padding: 50px 20px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.quality-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 35px;
+  color: #138a9c;
+}
+
+.quality-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quality-list li {
+  font-size: 1.1rem;
+  padding: 8px 0;
+  border-bottom: 1px solid #d1d5db;
+}
+
+/* ====== About Tirupati Cotton ====== */
+
+/* === About Our Company Section Styling === */
+.container.py-15 h1 {
+  color: #138a9c;
+  font-weight: bolder; /* blue heading */
+  margin-bottom: 4px; /* increased gap between heading and text */
+}
+
+.container.py-15 p {
+  color: #000; /* black text */
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 30px; /* add space below paragraph too */
+}
+
+
+.about-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.about-section .about-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color:#138a9c;
+  margin-bottom: 50px;
+}
+
+.about-section .about-heading h1 {
+  font-size: 800px;
+  font-weight: bold;
+  color: #121313;
+  text-align: center;
+  margin-top: 2px;
+
+}
+
+.about-section .about-content p {
+  max-width: 800px;
+  margin: 20px auto 40px auto;;
+  line-height: 1.7;
+  color: #1f2937;
+  margin-top: 200px;
+}
+
+.about-section .highlight {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #dbeafe;
+  padding: 15px 20px;
+  border-left: 5px solid #138a9c;
+  font-weight: 500;
+}
+
+
+
+/* ====== Cards in About Section ====== */
+.grid .p-4 {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid .p-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Product Quality Section */
+.product-quality-section {
+  background: linear-gradient(135deg, #e0f7fa, #d1c4e9); /* subtle gradient */
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-quality-section:hover {
+  transform: translateY(-5px);
+}
+
+.product-quality-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #138a9c; /* deep purple */
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.product-quality-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #00acc1; /* blue underline */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.quality-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.quality-list li {
+  /* Gradient background */
+  background: linear-gradient(135deg, #0488c1, #7cb9d3); 
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #ffffff; /* white text looks better on gradient */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-width: 180px;
+}
+
+.quality-list li:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+
+
+.mvvs-section {
+  display: flex;
+  justify-content: center; /* center all cards horizontally */
+  gap: 50px;               /* space between each card */
+  flex-wrap: wrap;          /* wrap on smaller screens */
+  margin: 50px 0;
+}
+
+.card {
+  text-align: center;       /* center icon and text */
+  max-width: 250px;         /* optional card width */
+}
+
+.card .icon {
+  width: 80px;              /* size of the icon */
+  height: 80px;
+  margin-bottom: 15px;      /* spacing between icon and heading */
+}
+
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #004080;           /* attractive color */
+}
+
+.card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+/*about*/
+
+
+.about-section {
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+}
+
+.about-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 40px;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.about-image {
+  position: relative;              /* for overlapping images */
+  width: 450px;                    /* size of the image area */
+  height: 450px;
+  flex-shrink: 0; 
+  overflow: visible;                  /* prevent shrinking on small screens */
+}
+
+.about-image img {
+  position: absolute;              /* enables overlap */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;             /* square with soft corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  border: none;                    /* remove circular border */
+  transition: transform 0.3s ease;
+}
+
+/* Front image */
+.about-image .img1 {
+  width: 80%;
+  height: 80%;
+  top: -50px;
+  left: -120px;
+  z-index: 2;
+}
+/* Back image (shifted for overlap effect) */
+.about-image .img2 {
+  width: 90%;       /* smaller so it’s visible behind */
+  height: 90%;
+  top: 0;        /* move down */
+  left: 0;       /* move right */
+  z-index: 1;
+  opacity: 0.95;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-image {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .about-image {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  .about-image .img2 {
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.about-content {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  color: #333;
+  text-align: justify;
+  min-width: 300px;
+}
+
+.about-content strong {
+  color: #004aad; 
+}
+
+.highlight {
+  margin-top: 20px;
+  background: #e6f0ff;
+  padding: 15px;
+  border-left: 5px solid #007bff;
+  border-radius: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+  .about-image img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+
+
+
+/* --------------------------
+    Footer
+---------------------------*/
+footer {
+    background-color: #141617;
+    color: #fff;
+    padding: 50px 20px 20px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section li,
+.footer-section a {
+    color: #fff;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a:hover {
+    color: #ffdd57;
+    transition: 0.3s;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 15px;
+}
+
+.footer-section.social a {
+    color: white;             /* icon color */
+    font-size: 20px;          /* icon size */
+    margin-right: 15px;       /* spacing between icons */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section.social a:hover {
+    color: #ffdd57;           /* hover color */
+}
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}

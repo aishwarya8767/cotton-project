@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Surgical Dressing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/en.css' %}">
+</head>
+
+
+<body>
+
+    <button class="enquire-btn" id="openModalBtn">ENQUIRE</button>
+
+  <!-- The Popup (Modal) -->
+  <div id="enquireModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Enquiry Form</h2>
+      <form method="POST" action="{% url 'enquire' %}" onsubmit="return showThankYou();">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal -->
+  <script>
+    const modal = document.getElementById("enquireModal");
+    const openBtn = document.getElementById("openModalBtn");
+    const closeBtn = document.getElementById("closeModal");
+
+    openBtn.onclick = () => modal.style.display = "block";
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+   // ✅ Function to show thank you message
+  function showThankYou() {
+    alert("✅ Thank you! Your enquiry has been submitted.");
+    modal.style.display = "none"; // close popup
+    return true; // allow form to submit
+  }
+  </script>
+</body>
+</html>
